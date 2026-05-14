@@ -83,192 +83,60 @@
 }
 
 
-/* === all-sites language and mobile overflow fixes === */
-html, body {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
+/* Arabic review mobile overflow fix */
+@media (max-width:700px){
+  .container>div[style*="grid-template-columns:280px 1fr"],
+  .container>div[style*="grid-template-columns: 280px 1fr"]{
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow:visible!important;
+  }
+  .container>div[style*="grid-template-columns:280px 1fr"]>*,
+  .container>div[style*="grid-template-columns: 280px 1fr"]>*{
+    min-width:0!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  .rating-block{
+    width:100%!important;
+    max-width:100%!important;
+    padding:26px 20px!important;
+  }
+  .rating-score{font-size:72px!important}
+  body[dir="rtl"] .pros-cons{direction:rtl!important}
+  body[dir="rtl"] .pros li,
+  body[dir="rtl"] .cons li{
+    flex-direction:row-reverse!important;
+    justify-content:flex-start!important;
+    text-align:right!important;
+  }
+  body[dir="rtl"] .section .container{overflow:visible!important}
 }
-body[dir="rtl"] {
-  direction: rtl !important;
-  text-align: right;
-}
-body[dir="rtl"] main,
-body[dir="rtl"] section,
-body[dir="rtl"] .container,
-body[dir="rtl"] .page-hero,
-body[dir="rtl"] .hero,
-body[dir="rtl"] .img-section,
-body[dir="rtl"] .rating-block,
-body[dir="rtl"] .pros-cons,
-body[dir="rtl"] .features-grid,
-body[dir="rtl"] .steps-grid,
-body[dir="rtl"] .cta-strip,
-body[dir="rtl"] .info-table,
-body[dir="rtl"] .faq-list {
-  max-width: 100% !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
-}
-body[dir="rtl"] .breadcrumb,
-body[dir="rtl"] .check-list li,
-body[dir="rtl"] .pros li,
-body[dir="rtl"] .cons li,
-body[dir="rtl"] .footer-col li a {
-  direction: rtl !important;
-  text-align: right !important;
-}
-body[dir="rtl"] .section-content,
-body[dir="rtl"] .page-hero-inner,
-body[dir="rtl"] .feature-card,
-body[dir="rtl"] .step-card,
-body[dir="rtl"] .faq-q,
-body[dir="rtl"] .faq-a,
-body[dir="rtl"] .pros,
-body[dir="rtl"] .cons {
-  direction: rtl !important;
-  text-align: right !important;
-}
-body[dir="rtl"] .lang-switcher,
-body[dir="rtl"] .header-right,
-body[dir="rtl"] .mobile-nav,
-body[dir="rtl"] .btn-group {
-  direction: rtl !important;
-}
-body[dir="rtl"] .rating-block {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-body[dir="rtl"] .rating-score,
-body[dir="rtl"] .rating-stars,
-body[dir="rtl"] .rating-label {
-  text-align: center !important;
-  direction: rtl !important;
-}
+@media (max-width:420px){.rating-score{font-size:62px!important}}
 
-@media (max-width: 900px) {
-  body[dir="rtl"] .img-section,
-  body[dir="rtl"] .img-section.reverse,
-  body[dir="rtl"] .pros-cons,
-  body[dir="rtl"] .features-grid,
-  body[dir="rtl"] .steps-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    gap: 22px !important;
-    direction: rtl !important;
-  }
-  body[dir="rtl"] .img-section > *,
-  body[dir="rtl"] .img-section.reverse > * {
-    direction: rtl !important;
-    min-width: 0 !important;
-    width: 100% !important;
-  }
-}
 
-@media (max-width: 700px) {
-  body[dir="rtl"] .container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-    overflow: hidden !important;
+/* Review summary responsive grid */
+.review-summary-grid{
+  display:grid!important;
+  grid-template-columns:280px 1fr!important;
+  gap:40px!important;
+  align-items:start!important;
+  width:100%!important;
+  max-width:100%!important;
+}
+@media (max-width:700px){
+  .review-summary-grid{
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+    min-width:0!important;
+    overflow:visible!important;
   }
-  body[dir="rtl"] .site-header .container,
-  body[dir="rtl"] .site-header .header-inner {
-    overflow: visible !important;
-  }
-  body[dir="rtl"] .header-inner {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    gap: 10px !important;
-    min-width: 0 !important;
-  }
-  body[dir="rtl"] .logo {
-    flex: 0 1 auto !important;
-    min-width: 0 !important;
-  }
-  body[dir="rtl"] .logo img {
-    max-width: 132px !important;
-    height: auto !important;
-  }
-  body[dir="rtl"] .header-right {
-    flex: 0 0 auto !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-  }
-  body[dir="rtl"] .lang-switcher {
-    flex: 0 0 auto !important;
-    min-width: 112px !important;
-    max-width: 132px !important;
-  }
-  body[dir="rtl"] .hamburger {
-    flex: 0 0 auto !important;
-  }
-  body[dir="rtl"] .mobile-nav {
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    text-align: right !important;
-  }
-  body[dir="rtl"] .mobile-nav a {
-    justify-content: flex-start !important;
-    text-align: right !important;
-    direction: rtl !important;
-  }
-  body[dir="rtl"] .page-hero-inner,
-  body[dir="rtl"] .hero-inner {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  body[dir="rtl"] .section-title,
-  body[dir="rtl"] .hero-title,
-  body[dir="rtl"] .page-hero-inner h1,
-  body[dir="rtl"] .section-content h2,
-  body[dir="rtl"] h1,
-  body[dir="rtl"] h2,
-  body[dir="rtl"] h3 {
-    max-width: 100% !important;
-    overflow-wrap: anywhere !important;
-    word-break: normal !important;
-  }
-  body[dir="rtl"] .rating-block {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 28px 18px !important;
-  }
-  body[dir="rtl"] .pros,
-  body[dir="rtl"] .cons,
-  body[dir="rtl"] .feature-card,
-  body[dir="rtl"] .step-card,
-  body[dir="rtl"] .cta-strip {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  body[dir="rtl"] .section-img-placeholder img,
-  body[dir="rtl"] .img-section img,
-  body[dir="rtl"] .section-img {
-    object-position: left center !important;
-  }
-  body[dir="rtl"] table,
-  body[dir="rtl"] .info-table {
-    width: 100% !important;
-    max-width: 100% !important;
-    table-layout: fixed !important;
-  }
-  body[dir="rtl"] th,
-  body[dir="rtl"] td {
-    overflow-wrap: anywhere !important;
+  .review-summary-grid>*{
+    min-width:0!important;
+    width:100%!important;
+    max-width:100%!important;
   }
 }
