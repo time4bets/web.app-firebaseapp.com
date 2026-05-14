@@ -1,0 +1,11 @@
+Upload instructions:
+
+1. Unzip this archive.
+2. Open GitHub repository: time4bets/web.app-firebaseapp.com
+3. Click Add file -> Upload files.
+4. Upload ALL contents of this folder to the repository root.
+5. Important: also upload the hidden .github folder. On Mac press Cmd + Shift + . in Finder to show hidden folders.
+6. Commit directly to the main branch.
+7. Open the Actions tab. The Firebase Hosting workflow should start automatically.
+
+Do not upload the zip file itself to GitHub. Upload the unzipped files and folders.
