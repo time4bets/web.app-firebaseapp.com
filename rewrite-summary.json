@@ -1,1 +1,20 @@
-{"version":"third_global_rewrite","images":"existing_only","responsive_variants_created":false,"note":"All main EN and AR pages rewritten and reordered again."}
+{
+  "version": "image_fit_and_content_rewrite_2026_05_15",
+  "scope": "All English and Arabic HTML pages plus redirect page",
+  "image_changes": [
+    "Added CSS patch to all inline style blocks and css/style.css so hero, page-hero, section and game images use contain/object-position instead of cropping.",
+    "Added aspect-ratio based image containers for regular, wide and portrait section images.",
+    "Updated all image width/height attributes to match real files in img."
+  ],
+  "content_changes": [
+    "Rebuilt main content on all English pages with more practical guidance.",
+    "Rebuilt main content on all Arabic pages with localized useful guidance.",
+    "Updated meta titles and descriptions for rewritten pages.",
+    "Updated footer descriptions and adult-responsibility disclaimer."
+  ],
+  "validation": {
+    "broken_image_paths": 0,
+    "image_dimension_mismatches": 0,
+    "html_pages_patched": 17
+  }
+}
